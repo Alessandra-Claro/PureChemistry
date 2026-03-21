@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciTech | Biological Truth</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Playfair+Display:ital,wght@0,400;1,700&family=JetBrains+Mono&family=Style+Script&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#fcfaf7] text-gray-900 selection:bg-emerald-200">
+
+    <nav class="fixed w-full z-50 transition-all duration-500 border-b border-black/5 bg-[#f4efe6]/80 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
+            <a class="flex items-baseline group" href="#home">
+                <span class="font-['Style_Script'] text-5xl text-black group-hover:text-emerald-900 transition-colors">sci</span>
+                <span class="font-['Montserrat'] font-black text-2xl uppercase tracking-tighter text-black">tech</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-12 items-center">
+                <a class="nav-link-style" href="#purpose">Purpose</a>
+                <a class="nav-link-style" href="#articles">Articles</a>
+                <a href="#contact" class="bg-black text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-emerald-900 transition-all btn-tactile">Get in touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-7 space-y-10 reveal">
+                <div class="inline-flex items-center gap-3 px-4 py-2 bg-emerald-50 rounded-full border border-emerald-100">
+                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <span class="mono-label text-emerald-800">Intelligence Glow Up Activated</span>
+                </div>
+                <h1 class="hero-title text-gradient">Biological <br><span class="italic font-normal">Truth.</span></h1>
+                <p class="section-subtext">SciTech is a curated space where we demystify the molecular behavior of beauty. From neuropharmacology to the tech behind the glow.</p>
+                <div class="flex items-center gap-8 pt-6">
+                    <a href="#articles" class="btn-primary">Explore Archive</a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="absolute -inset-10 bg-emerald-100/50 rounded-full blur-3xl"></div>
+                <div class="relative aspect-[4/5] bg-[#e8e2d6] rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white rotate-2 hover:rotate-0 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover opacity-90" alt="Aesthetic Science">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="purpose" class="py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-8 text-center">
+            <span class="mono-label text-gray-400 mb-6 block uppercase">Our Mission</span>
+            <h2 class="section-title mb-12">Aesthetic Authority Meets Clinical Investigation</h2>
+            <p class="text-2xl font-['Playfair_Display'] text-gray-600 leading-relaxed italic">
+                "We believe that intelligence is the ultimate cosmetic. SciTech combines rigorous scientific inquiry with high-end aesthetic standards to redefine what it means to 'glow' from the inside out."
+            </p>
+        </div>
+    </section>
+
+    <section id="articles" class="py-32 bg-[#fcfaf7]">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span class="mono-label text-emerald-700">The Archive</span>
+                    <h2 class="section-title">Latest Intel</h2>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="article-card group">
+                    <div class="overflow-hidden rounded-3xl aspect-square mb-6">
+                        <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=600" class="group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <span class="mono-label text-xs">Neurobiology</span>
+                    <h3 class="text-2xl font-['Playfair_Display'] mt-2 group-hover:text-emerald-800 transition">The Dopamine of Design</h3>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-black text-white rounded-[4rem] mx-4 mb-4">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h2 class="text-6xl font-['Playfair_Display'] mb-8">Stay Connected.</h2>
+            <p class="mono-label text-gray-500 mb-12 uppercase tracking-[0.4em]">Inquiries & Collaborations</p>
+            <form class="space-y-6">
+                <input type="email" placeholder="YOUR EMAIL ADDRESS" class="w-full bg-transparent border-b border-gray-800 py-4 text-center text-xl font-['Montserrat'] focus:border-emerald-500 outline-none transition">
+                <button class="btn-primary bg-white text-black mt-8">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center">
+        <p class="mono-label text-gray-300">&copy; 2026 SciTech — Alessa Brand Operations</p>
+    </footer>
+
+</body>
+</html>
