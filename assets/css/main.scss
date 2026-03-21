@@ -1,10 +1,11 @@
 ---
 ---
-/* LUXURY EDITORIAL CSS */
+/* SCI-TECH LUXURY EDITORIAL CSS */
 
-$cream: {{ site.colors.cream | default: "#f4efe6" }};
-$emerald: {{ site.colors.emerald | default: "#0b3d2e" }};
-$black: {{ site.colors.black | default: "#000000" }};
+/* 1. Core Variables */
+$cream: #f4efe6;
+$emerald: #0b3d2e;
+$black: #000000;
 
 body {
   background-color: $cream;
@@ -14,13 +15,27 @@ body {
   line-height: 1.6;
 }
 
-.header-wrapper,.content-wrapper {
-  max-width: 1000px;
+/* 2. Side-by-Side Header Layout */
+.header-wrapper {
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 40px;
+  display: flex; /* Restores side-by-side */
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* SOLID BLACK LOGO */
+.site-header {
+  padding: 30px 0;
+  background: rgba(244, 239, 230, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(11, 61, 46, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 3. Solid Black Logo */
 .logo-lockup {
   text-decoration: none!important;
   display: flex;
@@ -29,7 +44,7 @@ body {
 
 .logo-sci {
   font-family: 'Style Script', cursive;
-  color: $black!important; /* Force Black */
+  color: $black!important;
   font-size: 3.5rem;
   margin-right: -5px;
 }
@@ -37,17 +52,17 @@ body {
 .logo-tech {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  color: $black!important; /* Force Black */
-  font-size: 2.5rem;
+  color: $black!important;
+  font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: -1px;
 }
 
-/* EMERALD GREEN BUTTON LINKS */
+/* 4. Emerald Green Buttons (On the Side) */
 .nav-link {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none!important;
-  color: $emerald!important; /* Force Emerald */
+  color: $emerald!important;
   text-transform: lowercase;
   font-size: 0.9rem;
   font-weight: 800;
@@ -58,33 +73,46 @@ body {
 
 .nav-link:hover { opacity: 0.6; }
 
-/* HOME PAGE ORGANIZATION */
-.site-header {
-  padding: 50px 0;
-  border-bottom: 1px solid rgba(11, 61, 46, 0.1);
-}
-
-.hero-section {
+/* 5. Organized Home Page Sections */
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 40px;
   text-align: center;
-  padding: 100px 0;
-}
-
-h1 {
-  font-size: 4.5rem;
-  font-weight: 400;
-  letter-spacing: -2px;
-  margin-bottom: 20px;
 }
 
 .tagline {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 0.75rem;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   color: $emerald;
-  margin-bottom: 10px;
   display: block;
+  margin-bottom: 15px;
 }
 
-.fade-in { animation: fadeIn 1.5s ease; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 40px;
+  border: 1.5px solid $emerald;
+  color: $emerald!important;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none!important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-transform: lowercase;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover { background: $emerald; color: $cream!important; }
+
+.site-footer { text-align: center; padding: 100px 0 40px; opacity: 0.4; font-size: 0.7rem; }
