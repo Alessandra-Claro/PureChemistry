@@ -1,0 +1,47 @@
+---
+---
+@import "minima";
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Style+Script&display=swap');
+
+body {
+  background-color: {{ site.colors.beige }};
+  color: {{ site.colors.text }};
+  font-family: 'Georgia', serif; /* Elegant, editorial feel */
+}
+
+/* Specific Logo Styling */
+.site-title {
+  font-size: 2.5rem!important;
+  letter-spacing: -1px;
+}
+
+.logo-sci {
+  font-family: 'Style Script', cursive;
+  font-weight: 300;
+  color: {{ site.colors.emerald }};
+  text-transform: none;
+  margin-right: -5px; /* Tucking the words closer */
+}
+
+.logo-tech {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: {{ site.colors.gold }};
+}
+
+/* Relaxing Navigation Style */
+.site-nav {
+  background-color: transparent;
+ .page-link {
+    color: {{ site.colors.emerald }}!important;
+    font-weight: 600;
+    text-transform: lowercase; /* Minimalist, modern look */
+  }
+}
+
+h1, h2, h3 {
+  color: {{ site.colors.emerald }};
+}
