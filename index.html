@@ -126,59 +126,47 @@
 </div>
 
 <script>
-    const articles = {
-    lavender: {
-                title: "Lavender Chemistry on the Brain",
-                // This is your short summary for the first popup
-                desc: "Abstract: This paper examines the terpene alcohol Linalool ($C_{10}H_{18}O$) and its role as a non-synthetic anxiolytic. Lavender has long been used for sedation, but the molecular mechanism was unverified until recent trials showed its interaction with the GABAergic system.",
-                // This is the full research paper that shows after clicking "Read Now"
-                full: `
-                    <h3 class="font-bold text-black mb-2">Introduction</h3>
-                    <p class="mb-6">Lavender has long been used for sedation, but the molecular mechanism was unverified until recent trials showed its interaction with the GABAergic system.</p>
-                    
-                    <h3 class="font-bold text-black mb-2">Analysis</h3>
-                    <p class="mb-6">Linalool acts as a competitive antagonist at NMDA receptors. By modulating the Glutamate system and enhancing GABA(A) receptor function, it creates a "biological brake" on the central nervous system.</p>
-                    
-                    <h3 class="font-bold text-black mb-2">Conclusion</h3>
-                    <p>The study confirms that Linalool provides a significant sedative effect by physically altering neuronal firing rates, offering a clinical basis for its use in systemic wellness.</p>
-                `,
-                sources: "1. Journal of Natural Medicines (2021) - 'The Anxiolytic Effects of Linalool.'<br>2. Neuropharmacology Review - 'Terpene Interaction with NMDA Receptors.'"
-            },
-        melatonin: {
-            title: "Melatonin and the Light Switch",
-            // Short summary for the first popup
-            desc: "Abstract: A study on the N-acetyl-5-methoxytryptamine pathway. Melatonin is a derivative of the amino acid tryptophan, and its synthesis is a light-sensitive chemical reaction controlled by the pineal gland.",
-            // Full Research Paper
+ const articles = {
+        lavender: {
+            title: "Lavender Chemistry on the Brain",
+            desc: "Abstract: This paper examines the terpene alcohol Linalool ($C_{10}H_{18}O$) and its role as a non-synthetic anxiolytic. Lavender has long been used for sedation, but the molecular mechanism was unverified until recent trials showed its interaction with the GABAergic system.",
             full: `
                 <h3 class="font-bold text-black mb-2">Introduction</h3>
-                <p class="mb-6">Melatonin is synthesized from Serotonin through a two-step enzymatic process. It serves as the primary chemical signal for the body's internal 'darkness' state, regulating cellular repair cycles.</p>
-                
+                <p class="mb-6">Lavender has long been used for sedation, but the molecular mechanism was unverified until recent trials showed its interaction with the GABAergic system.</p>
                 <h3 class="font-bold text-black mb-2">Analysis</h3>
-                <p class="mb-6">Synthesis begins when the retina detects a lack of short-wavelength (blue) light, signaling the pineal gland to convert Serotonin into N-acetylserotonin, which is then methylated into Melatonin ($C_{13}H_{16}N_{2}O_{2}$). Exposure to artificial light sources effectively halts this chemical conversion, preventing the body from entering its repair phase.</p>
-                
+                <p class="mb-6">Linalool acts as a competitive antagonist at NMDA receptors. By modulating the Glutamate system and enhancing GABA(A) receptor function, it creates a "biological brake" on the central nervous system.</p>
                 <h3 class="font-bold text-black mb-2">Conclusion</h3>
-                <p>By managing light exposure, we are effectively managing a neurochemical switch. Systemic wellness depends on protecting this delicate methylation process to ensure the body's nighttime chemistry is fully activated.</p>
+                <p>The study confirms that Linalool provides a significant sedative effect by physically altering neuronal firing rates, offering a clinical basis for its use in systemic wellness.</p>
             `,
-            sources: "1. Journal of Pineal Research - 'The Chemistry of Sleep Signaling.'<br>2. Endocrine Reviews - 'Melatonin: Biosynthesis and Mechanism of Action.'"
-        }
+            sources: "1. Journal of Natural Medicines (2021)<br>2. Neuropharmacology Review"
+        },
+        melatonin: {
+            title: "Melatonin and the Light Switch",
+            desc: "Abstract: A study on the N-acetyl-5-methoxytryptamine pathway. Melatonin is a derivative of the amino acid tryptophan, and its synthesis is a light-sensitive chemical reaction controlled by the pineal gland.",
+            full: `
+                <h3 class="font-bold text-black mb-2">Introduction</h3>
+                <p class="mb-6">Melatonin is synthesized from Serotonin through a two-step enzymatic process. It serves as the primary chemical signal for the body's internal 'darkness' state.</p>
+                <h3 class="font-bold text-black mb-2">Analysis</h3>
+                <p class="mb-6">Synthesis begins when the retina detects a lack of blue light, signaling the pineal gland to convert Serotonin into N-acetylserotonin, which is then methylated into Melatonin ($C_{13}H_{16}N_{2}O_{2}$).</p>
+                <h3 class="font-bold text-black mb-2">Conclusion</h3>
+                <p>By managing light exposure, we are effectively managing a neurochemical switch required for nighttime cellular repair.</p>
+            `,
+            sources: "1. Journal of Pineal Research<br>2. Endocrine Reviews"
+        }, // <--- THIS COMMA WAS MISSING!
         vitaminc: {
-                title: "Vitamin C and the Skin's Structure",
-                // Short summary
-                desc: "Abstract: An investigation into L-ascorbic acid as a mandatory co-factor for the stabilization of the collagen triple helix. Dermal integrity relies on the hydroxylation of proline and lysine.",
-                // Full Research Paper
-                full: `
-                    <h3 class="font-bold text-black mb-2">Introduction</h3>
-                    <p class="mb-6">Dermal integrity relies on the hydroxylation of proline and lysine. This process requires a reducing agent to maintain enzymatic activity within the skin's structural layers.</p>
-                    
-                    <h3 class="font-bold text-black mb-2">Analysis</h3>
-                    <p class="mb-6">Vitamin C donates electrons to maintain iron atoms in their ferrous ($Fe^{2+}$) state. Without this redox reaction, the enzyme prolyl hydroxylase becomes inactive, leading to the systemic failure of collagen production.</p>
-                    
-                    <h3 class="font-bold text-black mb-2">Conclusion</h3>
-                    <p>By maintaining the redox cycle, Vitamin C acts as the primary engine for skin density and repair, proving that aesthetic radiance is a direct result of chemical stabilization.</p>
-                `,
-                sources: "1. American Journal of Clinical Dermatology - 'The Role of Vitamin C in Skin Health.'<br>2. Biochemistry Vol. 54 - 'Redox Reactions in Extracellular Matrix Assembly.'"
-            }
-        };
+            title: "Vitamin C and the Skin's Structure",
+            desc: "Abstract: An investigation into L-ascorbic acid as a mandatory co-factor for the stabilization of the collagen triple helix. Dermal integrity relies on the hydroxylation of proline and lysine.",
+            full: `
+                <h3 class="font-bold text-black mb-2">Introduction</h3>
+                <p class="mb-6">Dermal integrity relies on the hydroxylation of proline and lysine. This process requires a reducing agent to maintain enzymatic activity.</p>
+                <h3 class="font-bold text-black mb-2">Analysis</h3>
+                <p class="mb-6">Vitamin C donates electrons to maintain iron atoms in their ferrous ($Fe^{2+}$) state. Without this redox reaction, the enzyme prolyl hydroxylase becomes inactive.</p>
+                <h3 class="font-bold text-black mb-2">Conclusion</h3>
+                <p>By maintaining the redox cycle, Vitamin C acts as the primary engine for skin density and repair.</p>
+            `,
+            sources: "1. American Journal of Clinical Dermatology<br>2. Biochemistry Vol. 54"
+        }
+    };
 
     function openPreview(id) {
         const art = articles[id];
