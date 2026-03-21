@@ -2,7 +2,6 @@
 ---
 /* SCI-TECH LUXURY EDITORIAL CSS */
 
-/* 1. Core Variables */
 $cream: #f4efe6;
 $emerald: #0b3d2e;
 $black: #000000;
@@ -13,40 +12,42 @@ body {
   font-family: 'Playfair Display', serif;
   margin: 0;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* 2. Side-by-Side Header Layout */
+/* 1. SIDE-BY-SIDE HEADER - Keeps buttons on the right */
 .header-wrapper {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-  display: flex; /* Restores side-by-side */
+  padding: 0 60px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .site-header {
   padding: 30px 0;
-  background: rgba(244, 239, 230, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(11, 61, 46, 0.1);
+  background: rgba(244, 239, 230, 0.9);
+  backdrop-filter: blur(15px); /* Professional "floating" effect */
+  border-bottom: 1px solid rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* 3. Solid Black Logo */
+/* 2. BLACK LOGO - NO UNDERLINES */
 .logo-lockup {
   text-decoration: none!important;
   display: flex;
   align-items: baseline;
+  border: none!important;
 }
 
 .logo-sci {
   font-family: 'Style Script', cursive;
   color: $black!important;
   font-size: 3.5rem;
-  margin-right: -5px;
+  margin-right: -8px;
 }
 
 .logo-tech {
@@ -58,61 +59,66 @@ body {
   letter-spacing: -1px;
 }
 
-/* 4. Emerald Green Buttons (On the Side) */
+/* 3. EMERALD BUTTONS - NO UNDERLINES */
 .nav-link {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none!important;
   color: $emerald!important;
   text-transform: lowercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  letter-spacing: 1px;
-  margin-left: 25px;
+  letter-spacing: 2px;
+  margin-left: 35px;
   transition: opacity 0.3s ease;
 }
 
-.nav-link:hover { opacity: 0.6; }
+.nav-link:hover { opacity: 0.5; }
 
-/* 5. Organized Home Page Sections */
+/* 4. HERO ORGANIZATION - Editorial Hierarchy */
 .content-wrapper {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 120px 60px; /* Massive luxury spacing */
   text-align: center;
 }
 
 .tagline {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 5px;
   color: $emerald;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 5rem; /* Massive professional headline */
   font-weight: 400;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  line-height: 1;
+  letter-spacing: -3px;
+  margin-bottom: 40px;
+  line-height: 0.9;
 }
 
 .hero-btn {
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 50px;
   border: 1.5px solid $emerald;
   color: $emerald!important;
-  padding: 15px 40px;
-  border-radius: 50px;
+  padding: 18px 45px;
+  border-radius: 100px; /* Pill shape */
   text-decoration: none!important;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   text-transform: lowercase;
-  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
 }
 
 .hero-btn:hover { background: $emerald; color: $cream!important; }
 
-.site-footer { text-align: center; padding: 100px 0 40px; opacity: 0.4; font-size: 0.7rem; }
+.site-footer { text-align: center; padding: 100px 0 50px; opacity: 0.3; font-size: 0.65rem; letter-spacing: 1px; }
+
+/* FADE ANIMATION - Sensory Experience [3] */
+.fade-in { animation: fadeIn 2s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
