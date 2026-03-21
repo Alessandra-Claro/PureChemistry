@@ -9,5 +9,6 @@ colors:
   emerald: "#0b3d2e"
   gold: "#D5B038"
   black: "#000000"
+  text: "#1a1a1a"
 
 theme: # Keep this blank
