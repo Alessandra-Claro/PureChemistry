@@ -6,13 +6,13 @@
   <title>{{ page.title }} | SciTech</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Style+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Style+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
   <header class="site-header">
     <div class="header-wrapper">
-      <a class="logo" href="{{ '/' | relative_url }}">
+      <a class="logo-lockup" href="{{ '/' | relative_url }}">
         <span class="logo-sci">sci</span><span class="logo-tech">tech</span>
       </a>
       <nav class="site-nav">
@@ -24,10 +24,8 @@
     </div>
   </header>
 
-  <main class="fade-in">
-    <div class="content-wrapper">
-      {{ content }}
-    </div>
+  <main class="fade-in content-wrapper">
+    {{ content }}
   </main>
 
   <footer class="site-footer">
