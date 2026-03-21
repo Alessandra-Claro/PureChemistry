@@ -1,10 +1,8 @@
 title: SciTech
-email: your-email@example.com
-description: >-
-  A space where science meets beauty. Blogging for an intelligence glow up!
+description: A space where science meets beauty.
 
-# SYNC SETTINGS: Vital for https://alessacsardi.github.io/SciTech/
-baseurl: "/SciTech" 
+# SYNC SETTINGS: Vital for /SciTech/
+baseurl: "/SciTech"
 url: "https://alessacsardi.github.io"
 
 # Relaxing Aura Palette
@@ -14,4 +12,5 @@ colors:
   gold: "#D5B038"
   text: "#2b2b2b"
 
-theme: none # Use this to prevent the default theme from adding extra headers
+# DELETE the 'theme: none' line. If you want no theme, just leave it empty like this:
+theme:
