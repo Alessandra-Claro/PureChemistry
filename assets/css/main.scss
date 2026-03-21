@@ -1,60 +1,34 @@
 ---
 ---
-/* These dashes are required for Jekyll to process the CSS! */
+/* These dashes above are the 'glue' that makes the CSS work! */
 
-$beige: {{ site.colors.beige }};
-$emerald: {{ site.colors.emerald }};
-$gold: {{ site.colors.gold }};
-$text: {{ site.colors.text }};
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Style+Script&family=Playfair+Display:wght@400;700&display=swap');
 
 body {
-  background-color: $beige;
-  color: $text;
+  background-color: {{ site.colors.beige }};
+  color: {{ site.colors.text }};
   font-family: 'Playfair Display', serif;
   margin: 0;
-  padding: 0;
 }
 
-.wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* LOGO DESIGN */
 .logo-sci {
-  font-family: 'Style Script', cursive; /* Thin cursive */
-  font-weight: 300;
-  color: $emerald;
+  font-family: 'Style Script', cursive;
+  color: {{ site.colors.emerald }};
   font-size: 3.5rem;
-  text-transform: lowercase;
-  margin-right: -8px; /* Tucks 'tech' closer for a chic look */
 }
 
 .logo-tech {
-  font-family: 'Montserrat', sans-serif; /* Bold, print, thick */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  color: $gold;
-  font-size: 2.5rem;
+  color: {{ site.colors.gold }};
   text-transform: uppercase;
+  font-size: 2.5rem;
 }
 
-/* NAVIGATION */
-.site-nav {
-  margin-top: 10px;
- .page-link {
-    color: $emerald;
-    text-decoration: none;
-    font-weight: 600;
-    margin-right: 20px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: lowercase;
-    font-size: 0.9rem;
-  }
-}
-
-.site-header {
-  padding: 50px 0;
-  text-align: center;
-  border-bottom: 1px solid rgba(11, 61, 46, 0.1);
+/* Nav links styling */
+.page-link {
+  color: {{ site.colors.emerald }};
+  text-decoration: none;
+  margin-right: 15px;
+  font-family: 'Montserrat', sans-serif;
 }
